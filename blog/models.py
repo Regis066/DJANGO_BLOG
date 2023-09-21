@@ -7,3 +7,19 @@ class Post(models.Model):
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return self.title
+
+
+
+
+
+
+
+
+
+
+# if you want to get all the posts a certain user has created, you can use user.post_set.all()
+#  user.post_set.create()
